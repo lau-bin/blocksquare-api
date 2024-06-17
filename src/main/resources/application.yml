@@ -1,0 +1,31 @@
+app:
+  solution:
+    greedy:
+      max:
+        depth: 1000
+    full:
+      max:
+        depth: 6
+  problem:
+    max:
+      len: 16
+
+quarkus:
+  datasource:
+    db-kind: h2
+    username: sa
+    password:
+    jdbc:
+      url: jdbc:h2:mem:testdb
+      driver: org.h2.Driver
+  hibernate-orm:
+    log:
+      sql: true
+    database:
+      generation: drop-and-create
+  http:
+    cors:
+      ~: true
+      origins: http://localhost:3000
+      methods: GET,POST
+      headers: Content-Type,Authorization
